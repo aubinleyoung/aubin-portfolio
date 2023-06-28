@@ -16,11 +16,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <nav>
-    <Link href='/about'>About page</Link><br />
-    <Link href='/'>Home page</Link>
+   
+      <body>
+      <nav className='navbar flex bg-black text-white h-10 items-center justify-end p-5 gap-5'>
+
+    <Link href='/about'>Home</Link>
+    <Link href='/about'>About me</Link>
+    <Link href='/about'>Skills</Link>
+    <Link href='/about'>Portfoli</Link>
+    <button className='contact-btn rounded-xl bg-white text-black text-xs p-1'><Link href='/'>CONTACT ME</Link></button>
       </nav>
-      <body className={inter.className}>{children}</body>
+        {children}
+        </body>
     </html>
   )
 }
